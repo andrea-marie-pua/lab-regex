@@ -79,7 +79,7 @@ def find_urls(text):
     >>> find_urls('no links in this tweet')
     []
     '''
-    return re.findall(r'https?://www\.[A-Za-z0-9-]+\.[A-Za-z]+', text)
+    return re.findall(r'https?://[A-Za-z0-9.-]+(?:/[^\s]*)?', text)
     pass
 
 
